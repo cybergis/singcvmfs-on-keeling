@@ -1,0 +1,2 @@
+CVMFS_HTTP_PROXY="http://cvmfsqu1.cigi.illinois.edu:3128;http://cvmfsqu2.cigi.illinois.edu:3128;DIRECT"
+CVMFS_CACHE_BASE="/tmp/cvmfs"

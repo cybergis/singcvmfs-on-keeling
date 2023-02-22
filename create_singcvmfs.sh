@@ -8,7 +8,7 @@ EXECUTABLE_PATH="${BASE}/singcvmfs"
 # clone the cvmfsexec repo
 git clone https://github.com/cvmfs/cvmfsexec
 cd cvmfsexec
-./makedist -s default
+./makedist -m rhel7-x86_64 -s default
 
 # configure the repo
 cp $BASE/config/*.conf dist/etc/cvmfs/config.d/

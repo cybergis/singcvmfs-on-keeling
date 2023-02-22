@@ -5,7 +5,11 @@ This heavily uses the singcvmfs script from [cvmfsexec](https://github.com/cvmfs
 
 ## Steps
 
-1. **Use [create_singcvmfs.sh](create_singcvmfs.sh).** The expected output is something i
+1. **Use [create_singcvmfs.sh](create_singcvmfs.sh).** The expected output is something like the below. 
+
+**Notes:**
+* Note that we by default create the singcvmfs executable for rhel7 (the in-container OS), but [you can change the operating system as long as its supported](https://github.com/cvmfs/cvmfsexec#supported-operating-systems).
+* You may need to tinker with [default.local](default.local) to get the appropriate Squid proxies set.
 
 <details>
 <summary>Click to see the expected output</summary>
@@ -279,6 +283,14 @@ or
 > sbatch job.batch
 
 Submitted batch job 938242
+```
+
+## Making the Executable Available
+
+You have to add the directory of the executable to the ~/.bashrc. On keeling this looks like:
+
+```
+export PATH=/data/keeling/a/cigi-gisolve/singcvmfs-on-keeling:$PATH
 ```
 
 ## Cleanup
